@@ -16,8 +16,8 @@ An exploration project demonstrating how to integrate **[USWDS (U.S. Web Design 
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) v18 or higher
-- npm v9 or higher
+- [Node.js](https://nodejs.org/) v22 or higher
+- npm v9 or higher (needs verified)
 
 ## Getting started
 
