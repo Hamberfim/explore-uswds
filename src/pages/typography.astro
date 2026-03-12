@@ -1,0 +1,111 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Typography" description="USWDS typography and color tokens">
+  <div class="grid-container margin-top-4 margin-bottom-8">
+    <h1>Typography &amp; Colors</h1>
+    <p class="usa-intro">
+      USWDS ships a curated type scale and color palette accessible through
+      utility classes. This page shows several examples.
+    </p>
+
+    <!-- Type scale -->
+    <section class="usa-prose margin-bottom-4">
+      <h2>Type scale</h2>
+      <p class="font-body-3xs">font-body-3xs — 10px</p>
+      <p class="font-body-2xs">font-body-2xs — 12px</p>
+      <p class="font-body-xs">font-body-xs — 13px</p>
+      <p class="font-body-sm">font-body-sm — 14px</p>
+      <p class="font-body-md">font-body-md — 16px</p>
+      <p class="font-body-lg">font-body-lg — 18px</p>
+      <p class="font-body-xl">font-body-xl — 20px</p>
+      <p class="font-body-2xl">font-body-2xl — 24px</p>
+      <p class="font-body-3xl">font-body-3xl — 32px</p>
+    </section>
+
+    <!-- Heading sizes -->
+    <section class="usa-prose margin-bottom-4">
+      <h2>Headings</h2>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    </section>
+
+    <!-- Colors -->
+    <section class="margin-bottom-4">
+      <h2 class="usa-prose">Base color palette</h2>
+      <div class="grid-row grid-gap-sm">
+        {
+          [
+            { token: "base-lightest", label: "Base lightest" },
+            { token: "base-lighter", label: "Base lighter" },
+            { token: "base-light", label: "Base light" },
+            { token: "base", label: "Base" },
+            { token: "base-dark", label: "Base dark" },
+            { token: "base-darker", label: "Base darker" },
+            { token: "base-darkest", label: "Base darkest" },
+          ].map(({ token, label }) => (
+            <div class="tablet:grid-col-3 margin-bottom-2">
+              <div
+                class={`bg-${token} border-1px border-base-light padding-3`}
+              />
+              <p class="margin-0 font-body-xs">{label}</p>
+              <p class="margin-0 text-base font-mono-xs">{token}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <h2 class="usa-prose margin-top-4">Primary color palette</h2>
+      <div class="grid-row grid-gap-sm">
+        {
+          [
+            { token: "primary-lighter", label: "Primary lighter" },
+            { token: "primary-light", label: "Primary light" },
+            { token: "primary", label: "Primary" },
+            { token: "primary-dark", label: "Primary dark" },
+            { token: "primary-darker", label: "Primary darker" },
+          ].map(({ token, label }) => (
+            <div class="tablet:grid-col-3 margin-bottom-2">
+              <div
+                class={`bg-${token} border-1px border-base-light padding-3`}
+              />
+              <p class="margin-0 font-body-xs">{label}</p>
+              <p class="margin-0 text-base font-mono-xs">{token}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Prose -->
+    <section class="usa-prose margin-bottom-4">
+      <h2>Prose</h2>
+      <p>
+        USWDS <code>usa-prose</code> applies consistent readable styles to body
+        content. It sets a comfortable line length, font size, and spacing
+        suitable for long-form reading.
+      </p>
+      <blockquote>
+        "Design is not just what it looks like and feels like. Design is how it
+        works." — Steve Jobs
+      </blockquote>
+      <ul>
+        <li>Unordered list item one</li>
+        <li>Unordered list item two</li>
+        <li>Unordered list item three</li>
+      </ul>
+      <ol>
+        <li>Ordered list item one</li>
+        <li>Ordered list item two</li>
+        <li>Ordered list item three</li>
+      </ol>
+    </section>
+
+    <a class="usa-button usa-button--outline" href="/">← Back to Home</a>
+  </div>
+</Layout>

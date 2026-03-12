@@ -1,0 +1,279 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Components" description="USWDS component examples in Astro">
+  <div class="grid-container margin-top-4 margin-bottom-8">
+    <h1>USWDS Components</h1>
+    <p class="usa-intro">
+      Below are examples of common USWDS components rendered inside an Astro
+      page.
+    </p>
+
+    <!-- Alerts -->
+    <section class="usa-prose margin-bottom-4">
+      <h2>Alerts</h2>
+      <div
+        class="usa-alert usa-alert--info"
+        role="region"
+        aria-label="Informational alert"
+      >
+        <div class="usa-alert__body">
+          <h4 class="usa-alert__heading">Informational status</h4>
+          <p class="usa-alert__text">
+            This is an informational alert. You can use it to surface helpful
+            information to users.
+          </p>
+        </div>
+      </div>
+      <div
+        class="usa-alert usa-alert--success margin-top-2"
+        role="region"
+        aria-label="Success alert"
+      >
+        <div class="usa-alert__body">
+          <h4 class="usa-alert__heading">Success status</h4>
+          <p class="usa-alert__text">
+            The action was completed successfully.
+          </p>
+        </div>
+      </div>
+      <div
+        class="usa-alert usa-alert--warning margin-top-2"
+        role="region"
+        aria-label="Warning alert"
+      >
+        <div class="usa-alert__body">
+          <h4 class="usa-alert__heading">Warning status</h4>
+          <p class="usa-alert__text">
+            This is a warning. Please review before proceeding.
+          </p>
+        </div>
+      </div>
+      <div
+        class="usa-alert usa-alert--error margin-top-2"
+        role="region"
+        aria-label="Error alert"
+      >
+        <div class="usa-alert__body">
+          <h4 class="usa-alert__heading">Error status</h4>
+          <p class="usa-alert__text">
+            Something went wrong. Please try again.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="usa-prose margin-bottom-4">
+      <h2>Buttons</h2>
+      <div>
+        <button type="button" class="usa-button">Default</button>
+        <button type="button" class="usa-button usa-button--secondary">Secondary</button>
+        <button type="button" class="usa-button usa-button--accent-cool">Accent cool</button>
+        <button type="button" class="usa-button usa-button--accent-warm">Accent warm</button>
+        <button type="button" class="usa-button usa-button--outline">Outline</button>
+        <button type="button" class="usa-button usa-button--unstyled">Unstyled</button>
+      </div>
+      <div class="margin-top-2">
+        <button type="button" class="usa-button" disabled>Disabled</button>
+        <button type="button" class="usa-button usa-button--big">Big button</button>
+      </div>
+    </section>
+
+    <!-- Form elements -->
+    <section class="margin-bottom-4">
+      <h2>Form Elements</h2>
+      <form class="usa-form">
+        <!-- Text input -->
+        <fieldset class="usa-fieldset">
+          <div class="usa-form-group">
+            <label class="usa-label" for="input-text">Text input</label>
+            <input
+              class="usa-input"
+              id="input-text"
+              name="input-text"
+              type="text"
+              placeholder="Enter text"
+            />
+          </div>
+
+          <!-- Select -->
+          <div class="usa-form-group">
+            <label class="usa-label" for="select-state">
+              Select (state example)
+            </label>
+            <select class="usa-select" id="select-state" name="select-state">
+              <option value="">- Select -</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="TX">Texas</option>
+            </select>
+          </div>
+
+          <!-- Textarea -->
+          <div class="usa-form-group">
+            <label class="usa-label" for="input-textarea">Textarea</label>
+            <textarea
+              class="usa-textarea"
+              id="input-textarea"
+              name="input-textarea"
+              rows={4}
+            ></textarea>
+          </div>
+
+          <!-- Checkboxes -->
+          <fieldset class="usa-fieldset">
+            <legend class="usa-legend">Checkboxes</legend>
+            <div class="usa-checkbox">
+              <input
+                class="usa-checkbox__input"
+                id="check-option-1"
+                type="checkbox"
+                name="check-options"
+                value="option-1"
+              />
+              <label class="usa-checkbox__label" for="check-option-1">Option 1</label>
+            </div>
+            <div class="usa-checkbox">
+              <input
+                class="usa-checkbox__input"
+                id="check-option-2"
+                type="checkbox"
+                name="check-options"
+                value="option-2"
+              />
+              <label class="usa-checkbox__label" for="check-option-2">Option 2</label>
+            </div>
+          </fieldset>
+
+          <!-- Radio buttons -->
+          <fieldset class="usa-fieldset">
+            <legend class="usa-legend">Radio buttons</legend>
+            <div class="usa-radio">
+              <input
+                class="usa-radio__input"
+                id="radio-opt-a"
+                type="radio"
+                name="radio-options"
+                value="option-a"
+              />
+              <label class="usa-radio__label" for="radio-opt-a">Option A</label>
+            </div>
+            <div class="usa-radio">
+              <input
+                class="usa-radio__input"
+                id="radio-opt-b"
+                type="radio"
+                name="radio-options"
+                value="option-b"
+              />
+              <label class="usa-radio__label" for="radio-opt-b">Option B</label>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <button type="submit" class="usa-button">Submit</button>
+      </form>
+    </section>
+
+    <!-- Accordion -->
+    <section class="usa-prose margin-bottom-4">
+      <h2>Accordion</h2>
+      <div class="usa-accordion usa-accordion--bordered">
+        <h4 class="usa-accordion__heading">
+          <button
+            type="button"
+            class="usa-accordion__button"
+            aria-expanded="true"
+            aria-controls="accordion-1"
+          >
+            What is USWDS?
+          </button>
+        </h4>
+        <div id="accordion-1" class="usa-accordion__content usa-prose">
+          <p>
+            The U.S. Web Design System (USWDS) is a toolkit of principles,
+            guidance, and code to help government teams design and build
+            accessible, mobile-friendly websites.
+          </p>
+        </div>
+        <h4 class="usa-accordion__heading">
+          <button
+            type="button"
+            class="usa-accordion__button"
+            aria-expanded="false"
+            aria-controls="accordion-2"
+          >
+            Why use Astro with USWDS?
+          </button>
+        </h4>
+        <div id="accordion-2" class="usa-accordion__content usa-prose" hidden>
+          <p>
+            Astro generates fast static sites with minimal JavaScript. Pairing
+            it with USWDS lets you build accessible government-quality UIs while
+            keeping page weight low.
+          </p>
+        </div>
+        <h4 class="usa-accordion__heading">
+          <button
+            type="button"
+            class="usa-accordion__button"
+            aria-expanded="false"
+            aria-controls="accordion-3"
+          >
+            How do I customize USWDS?
+          </button>
+        </h4>
+        <div id="accordion-3" class="usa-accordion__content usa-prose" hidden>
+          <p>
+            USWDS exposes design tokens through Sass variables. You can override
+            tokens in a custom Sass theme file before importing
+            <code>@uswds/uswds</code>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table -->
+    <section class="usa-prose margin-bottom-4">
+      <h2>Table</h2>
+      <div class="usa-table-container--scrollable">
+        <table class="usa-table usa-table--striped usa-table--borderless">
+          <caption>Sample data table</caption>
+          <thead>
+            <tr>
+              <th scope="col">Package</th>
+              <th scope="col">Version</th>
+              <th scope="col">Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>astro</td>
+              <td>5.x</td>
+              <td>Static site generator / meta-framework</td>
+            </tr>
+            <tr>
+              <td>@uswds/uswds</td>
+              <td>3.x</td>
+              <td>U.S. Web Design System components &amp; styles</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- In-page navigation -->
+    <section class="usa-prose margin-bottom-4">
+      <h2>Tag / Badge</h2>
+      <span class="usa-tag">New</span>
+      <span class="usa-tag usa-tag--big">Big tag</span>
+    </section>
+
+    <a class="usa-button usa-button--outline" href="/">← Back to Home</a>
+  </div>
+</Layout>

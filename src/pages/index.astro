@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Home">
+  <!-- USWDS Hero Section -->
+  <section class="usa-hero" aria-label="Introduction">
+    <div class="grid-container">
+      <div class="usa-hero__callout">
+        <h1 class="usa-hero__heading">
+          <span class="usa-hero__heading--alt">Explore USWDS</span>
+          in an Astro project
+        </h1>
+        <p>
+          This project demonstrates how to integrate the U.S. Web Design System
+          (USWDS) into an Astro static-site project. Browse the sections below
+          to see components in action.
+        </p>
+        <a class="usa-button" href="/components">View Components</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tagline section -->
+  <section class="usa-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-4">
+          <h2 class="font-heading-xl margin-y-0">What is USWDS?</h2>
+          <p class="usa-intro">
+            The U.S. Web Design System (USWDS) is a design system for the
+            federal government, providing components and guidelines for building
+            accessible, mobile-friendly government websites.
+          </p>
+        </div>
+        <div class="tablet:grid-col-8 usa-prose">
+          <h3>Key features</h3>
+          <ul>
+            <li>
+              <strong>Accessible</strong> — meets WCAG 2.1 AA accessibility
+              standards out of the box
+            </li>
+            <li>
+              <strong>Mobile-first</strong> — designed for every screen size
+            </li>
+            <li>
+              <strong>Consistent</strong> — unified design language across
+              government websites
+            </li>
+            <li>
+              <strong>Open source</strong> — free to use, extend, and contribute
+            </li>
+          </ul>
+          <p>
+            Pairing USWDS with <strong>Astro</strong> gives you a fast,
+            content-focused static site with all the USWDS components and
+            accessibility built in.
+          </p>
+          <a class="usa-button usa-button--outline" href="/components">
+            See all components
+          </a>
+          <a
+            class="usa-button usa-button--outline"
+            href="/typography"
+          >
+            Typography &amp; Colors
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USWDS Cards section -->
+  <section class="usa-section bg-base-lightest">
+    <div class="grid-container">
+      <h2>Getting Started</h2>
+      <ul class="usa-card-group">
+        <li class="usa-card tablet:grid-col-4">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">1. Install</h2>
+            </div>
+            <div class="usa-card__body">
+              <p>Add USWDS and Astro to your project with npm:</p>
+              <code class="display-block padding-1 bg-base-darkest text-white font-mono-xs">
+                npm install @uswds/uswds astro
+              </code>
+            </div>
+          </div>
+        </li>
+        <li class="usa-card tablet:grid-col-4">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">2. Copy Assets</h2>
+            </div>
+            <div class="usa-card__body">
+              <p>Run the setup script to copy USWDS assets into <code>public/</code>:</p>
+              <code class="display-block padding-1 bg-base-darkest text-white font-mono-xs">
+                npm run setup
+              </code>
+            </div>
+          </div>
+        </li>
+        <li class="usa-card tablet:grid-col-4">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">3. Use Components</h2>
+            </div>
+            <div class="usa-card__body">
+              <p>
+                Reference USWDS CSS/JS in your Astro layout and use USWDS HTML
+                class names in your components.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</Layout>
