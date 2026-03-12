@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+// map relative path for deployment
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Components" description="USWDS component examples in Astro">
@@ -33,9 +36,7 @@ import Layout from "../layouts/Layout.astro";
       >
         <div class="usa-alert__body">
           <h4 class="usa-alert__heading">Success status</h4>
-          <p class="usa-alert__text">
-            The action was completed successfully.
-          </p>
+          <p class="usa-alert__text">The action was completed successfully.</p>
         </div>
       </div>
       <div
@@ -57,9 +58,7 @@ import Layout from "../layouts/Layout.astro";
       >
         <div class="usa-alert__body">
           <h4 class="usa-alert__heading">Error status</h4>
-          <p class="usa-alert__text">
-            Something went wrong. Please try again.
-          </p>
+          <p class="usa-alert__text">Something went wrong. Please try again.</p>
         </div>
       </div>
     </section>
@@ -69,15 +68,27 @@ import Layout from "../layouts/Layout.astro";
       <h2>Buttons</h2>
       <div>
         <button type="button" class="usa-button">Default</button>
-        <button type="button" class="usa-button usa-button--secondary">Secondary</button>
-        <button type="button" class="usa-button usa-button--accent-cool">Accent cool</button>
-        <button type="button" class="usa-button usa-button--accent-warm">Accent warm</button>
-        <button type="button" class="usa-button usa-button--outline">Outline</button>
-        <button type="button" class="usa-button usa-button--unstyled">Unstyled</button>
+        <button type="button" class="usa-button usa-button--secondary"
+          >Secondary</button
+        >
+        <button type="button" class="usa-button usa-button--accent-cool"
+          >Accent cool</button
+        >
+        <button type="button" class="usa-button usa-button--accent-warm"
+          >Accent warm</button
+        >
+        <button type="button" class="usa-button usa-button--outline"
+          >Outline</button
+        >
+        <button type="button" class="usa-button usa-button--unstyled"
+          >Unstyled</button
+        >
       </div>
       <div class="margin-top-2">
         <button type="button" class="usa-button" disabled>Disabled</button>
-        <button type="button" class="usa-button usa-button--big">Big button</button>
+        <button type="button" class="usa-button usa-button--big"
+          >Big button</button
+        >
       </div>
     </section>
 
@@ -121,8 +132,7 @@ import Layout from "../layouts/Layout.astro";
               class="usa-textarea"
               id="input-textarea"
               name="input-textarea"
-              rows={4}
-            ></textarea>
+              rows={4}></textarea>
           </div>
 
           <!-- Checkboxes -->
@@ -136,7 +146,9 @@ import Layout from "../layouts/Layout.astro";
                 name="check-options"
                 value="option-1"
               />
-              <label class="usa-checkbox__label" for="check-option-1">Option 1</label>
+              <label class="usa-checkbox__label" for="check-option-1"
+                >Option 1</label
+              >
             </div>
             <div class="usa-checkbox">
               <input
@@ -146,7 +158,9 @@ import Layout from "../layouts/Layout.astro";
                 name="check-options"
                 value="option-2"
               />
-              <label class="usa-checkbox__label" for="check-option-2">Option 2</label>
+              <label class="usa-checkbox__label" for="check-option-2"
+                >Option 2</label
+              >
             </div>
           </fieldset>
 
@@ -274,6 +288,7 @@ import Layout from "../layouts/Layout.astro";
       <span class="usa-tag usa-tag--big">Big tag</span>
     </section>
 
-    <a class="usa-button usa-button--outline" href="/">← Back to Home</a>
+    <a class="usa-button usa-button--outline" href={`${base}`}>← Back to Home</a
+    >
   </div>
 </Layout>

@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+// map relative path for deployment
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Typography" description="USWDS typography and color tokens">
@@ -86,9 +89,9 @@ import Layout from "../layouts/Layout.astro";
     <section class="usa-prose margin-bottom-4">
       <h2>Prose</h2>
       <p>
-        USWDS <code>usa-prose</code> applies consistent readable styles to body
-        content. It sets a comfortable line length, font size, and spacing
-        suitable for long-form reading.
+        USWDS <code>usa-prose</code> applies consistent readable styles to body content.
+        It sets a comfortable line length, font size, and spacing suitable for long-form
+        reading.
       </p>
       <blockquote>
         "Design is not just what it looks like and feels like. Design is how it
@@ -106,6 +109,7 @@ import Layout from "../layouts/Layout.astro";
       </ol>
     </section>
 
-    <a class="usa-button usa-button--outline" href="/">← Back to Home</a>
+    <a class="usa-button usa-button--outline" href={`${base}`}>← Back to Home</a
+    >
   </div>
 </Layout>
