@@ -2,7 +2,7 @@
 
 An exploration project demonstrating how to integrate **[USWDS (U.S. Web Design System)](https://designsystem.digital.gov/how-to-use-uswds/)** within an **[Astro](https://docs.astro.build/en/tutorial/0-introduction/)** static-site project.
 
-![Homepage screenshot](https://github.com/user-attachments/assets/39a6d4d0-93d0-4c26-9999-fd0b8398117f)
+![Homepage screenshot](https://raw.githubusercontent.com/Hamberfim/explore-uswds/refs/heads/main/USWDS-Astro-Screenshot.png)
 
 ## What's inside
 
