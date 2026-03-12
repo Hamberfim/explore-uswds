@@ -54,6 +54,10 @@ Open [http://localhost:4321](http://localhost:4321) in your browser.
    - `/uswds/js/uswds.min.js` at the end of `<body>` (enables interactive components)
 4. **Use components** — Any Astro page wrapped in `<Layout>` can use USWDS HTML class names directly.
 
+## Deployment to Github Pages
+astro.yaml --> Using Github Actions | Workflow for building and deploying an Astro site to GitHub Pages
+... to come.
+
 ## Resources
 
 - [USWDS Documentation](https://designsystem.digital.gov/)
