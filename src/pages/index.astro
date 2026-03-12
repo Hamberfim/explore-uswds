@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+// map relative path for deployment
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Home">
@@ -16,7 +19,7 @@ import Layout from "../layouts/Layout.astro";
           (USWDS) into an Astro static-site project. Browse the sections below
           to see components in action.
         </p>
-        <a class="usa-button" href="/components">View Components</a>
+        <a class="usa-button" href={`${base}/components`}>View Components</a>
       </div>
     </div>
   </section>
@@ -37,32 +40,28 @@ import Layout from "../layouts/Layout.astro";
           <h3>Key features</h3>
           <ul>
             <li>
-              <strong>Accessible</strong> — meets WCAG 2.1 AA accessibility
-              standards out of the box
+              <strong>Accessible</strong> — meets WCAG 2.1 AA accessibility standards
+              out of the box
             </li>
             <li>
               <strong>Mobile-first</strong> — designed for every screen size
             </li>
             <li>
-              <strong>Consistent</strong> — unified design language across
-              government websites
+              <strong>Consistent</strong> — unified design language across government
+              websites
             </li>
             <li>
               <strong>Open source</strong> — free to use, extend, and contribute
             </li>
           </ul>
           <p>
-            Pairing USWDS with <strong>Astro</strong> gives you a fast,
-            content-focused static site with all the USWDS components and
-            accessibility built in.
+            Pairing USWDS with <strong>Astro</strong> gives you a fast, content-focused
+            static site with all the USWDS components and accessibility built in.
           </p>
           <a class="usa-button usa-button--outline" href="/components">
             See all components
           </a>
-          <a
-            class="usa-button usa-button--outline"
-            href="/typography"
-          >
+          <a class="usa-button usa-button--outline" href="/typography">
             Typography &amp; Colors
           </a>
         </div>
@@ -82,7 +81,9 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <div class="usa-card__body">
               <p>Add USWDS and Astro to your project with npm:</p>
-              <code class="display-block padding-1 bg-base-darkest text-white font-mono-xs">
+              <code
+                class="display-block padding-1 bg-base-darkest text-white font-mono-xs"
+              >
                 npm install @uswds/uswds astro
               </code>
             </div>
@@ -94,8 +95,14 @@ import Layout from "../layouts/Layout.astro";
               <h2 class="usa-card__heading">2. Copy Assets</h2>
             </div>
             <div class="usa-card__body">
-              <p>Run the setup script to copy USWDS assets into <code>public/</code>:</p>
-              <code class="display-block padding-1 bg-base-darkest text-white font-mono-xs">
+              <p>
+                Run the setup script to copy USWDS assets into <code
+                  >public/</code
+                >:
+              </p>
+              <code
+                class="display-block padding-1 bg-base-darkest text-white font-mono-xs"
+              >
                 npm run setup
               </code>
             </div>
